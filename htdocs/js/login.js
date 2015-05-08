@@ -1,4 +1,3 @@
-
 $(document).ready(function() {
 	
 	$("#login").click(function() {
@@ -17,6 +16,8 @@ $(document).ready(function() {
 			data: form_data,
 			success: function(response)
 			{
+				//alert('hola');
+				//alert(response);
 				if(response == 'success')
 					$("#form1").slideUp('slow', function() {
 						$("#message").html("<p class='success'>You have logged in successfully!</p>");
@@ -31,4 +32,3 @@ $(document).ready(function() {
 	});
 	
 });
-

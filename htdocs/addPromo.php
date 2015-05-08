@@ -3,8 +3,16 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset-utf-8" />
 <title>Fidelity</title>
-	<link href="css/fileuploader.css" rel="stylesheet" type="text/css">	
-	<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<!--script type="text/javascript" src="js/jquery-1.7.2.min.js"></script-->
+<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+<link href="css/fileuploader.css" rel="stylesheet" type="text/css">	
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
 </head>
 <body>
 
@@ -18,8 +26,8 @@
     </script>
 
 	<p>&nbsp;</p>
-	<div id="content">
-		<h1>Add your Promo</h1>
+	<div id="content" style="width:30%; margin:10px">
+		<h2>Add your Promo</h2>
 
 		<?php
 		include 'lib/dbConn.php';
@@ -50,49 +58,44 @@
 		}
 		?>
 
-		<form id="promo-form" name="promo-form" action="addPromo.php"
-			method="post">
+		<form role="form" id="promo-form" name="promo-form" action="addPromo.php" method="post">
+			<div class="form-group">
+  			
+  			<label for="name">Name</label>
+    		<input name="name" id="name" type="text" class="form-control" placeholder="Name">
+
 			<p>
-				<label for="name">Promo Name: </label> <input type="text"
-					name="name" id="name" />
+				<div id="logo_image"></div>
+				<ul id="separate-list"></ul>
+				<input type="hidden" name="logo" id="logo" value="" />
 			</p>
-			<p>
-					<div id="logo_image"></div>
-					<ul id="separate-list"></ul>
-					<input type="hidden" name="logo" id="logo" value="" />
-			</p>
-			<p>
-				<label for="address">Address: </label> 
-				<input type="address" name="address" id="address" />
-			</p>
-			<p>
-				<label for="discount">Discount: </label> 
-				<input type="text" name="discount" id="discount" />
-			</p>
-			<p>
-				<label for="distanceKm">Distance: </label> 
-				<input type="text" name="distanceKm" id="distanceKm" />
-			</p>
-			<p>
-				<label for="shortDesc">Short Description: </label> 
-				<textarea type="text" name="shortDesc" id="shortDesc"  rows="2" cols="20" maxlength="99"> </textarea>
-			</p>
-			<p>
-				<label for="longDesc">Long Description: </label> 
-				<input type="text" name="longDesc" id="longDesc" />
-			</p>
-			<p>
-				<label for="from">Date from: </label> 
-				<input type="text" name="from" id="from" />
-			</p>
-			<p>
-				<label for="to">Date to: </label> 
-				<input type="text" name="to" id="to" />
-			</p>
+
+  			<label for="address">Address</label>
+    		<input name="address" id="address" type="text" class="form-control" placeholder="Address">
+
+  			<label for="discount">Discount</label>
+    		<input name="discount" id="discount" type="text" class="form-control" placeholder="Discount">
+
+			<label for="distanceKm">Distance</label>
+    		<input name="distanceKm" id="distanceKm" type="text" class="form-control" placeholder="Distance Km">
+
+			<label for="shortDesc">Short Description</label>
+    		<input name="shortDesc" id="shortDesc" type="text" class="form-control" placeholder="Short Desc.">
+
+			<label for="longDesc">Long Description</label>
+    		<textarea class="form-control" rows="3" name="longDesc" id="longDesc"></textarea>
+
+			<label for="from">Date from</label>
+    		<input name="from" id="from" type="date" class="form-control" placeholder="Date from">
+
+			<label for="to">Date to</label>
+    		<input name="to" id="to" type="date" class="form-control" placeholder="Date to">
+			
+			<br/>
 			<input type="hidden" id="addPromo" name="addPromo" value="Add Promo" />
-			<p>
-				<a href="javascript: submitform()">Add Promo</a>
-			</p>
+			<a href="javascript: submitform()" class="btn btn-info btn-sm">Add Promo</a>
+			
+			</div>
 		</form>
 	</div>
 	

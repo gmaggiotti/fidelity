@@ -3,11 +3,17 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset-utf-8" />
 <title>Fidelity</title>
-<link rel="stylesheet" href="css/stylie.css" type="text/css"
-	media="screen" />
-	<link href="css/fileuploader.css" rel="stylesheet" type="text/css">	
-	<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<!--script type="text/javascript" src="js/jquery-1.7.2.min.js"></script-->
+<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+<link href="css/fileuploader.css" rel="stylesheet" type="text/css">	
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 </head>
+
 <body>
 
 	<script type="text/javascript">
@@ -21,8 +27,8 @@
     </script>
 
 	<p>&nbsp;</p>
-	<div id="content">
-		<h1>Add your Promo</h1>
+	<div id="content" style="width:30%; margin:10px">
+		<h2>Edit your Promo</h2>
 
 		<?php
 		include 'lib/dbConn.php';
@@ -54,8 +60,6 @@
  	
 		}
 
-		
-
 		if(isset($_GET['e_id']) )
 		{
 			$sql = "SELECT * FROM promotion WHERE id=".$_GET['e_id'];
@@ -63,50 +67,45 @@
 			$row = mysql_fetch_array($result);
 		}
 		?>
+		
+		<form role="form" id="promo-form" name="promo-form" action="editPromo.php" method="post">
+			<div class="form-group">
+  			
+  			<label for="name">Name</label>
+    		<input name="name" id="name" type="text" class="form-control" placeholder="Name" value="<? echo $row['name']?>" />
+			<p>
+				<div id="logo_image"></div>
+				<ul id="separate-list"><?echo $row['logo_img']?></ul>
+				<input type="hidden" name="logo" id="logo" value="<? echo $row['logo_img']?>" />
+			</p>
 
-		<form id="promo-form" name="promo-form" action="editPromo.php"
-			method="post">
-			<p>
-				<label for="name">Promo Name: </label> <input type="text"
-					name="name" id="name" value="<? echo $row['name']?>" />
-			</p>
-			<p>
-					<div id="logo_image"></div>
-					<ul id="separate-list"><?echo $row['logo_img']?></ul>
-					<input type="hidden" name="logo" id="logo" value="<? echo $row['logo_img']?>" />
-			</p>
-			<p>
-				<label for="address">Address: </label> 
-				<input type="address" name="address" id="address"value="<? echo $row['address']?>" />
-			</p>
-			<p>
-				<label for="discount">Discount: </label> 
-				<input type="text" name="discount" id="discount" value="<? echo $row['discount']?>"/>
-			</p>
-			<p>
-				<label for="distanceKm">Distance: </label> 
-				<input type="text" name="distanceKm" id="distanceKm" value="<? echo $row['distanceKm']?>"/>
-			</p>
-			<p>
-				<label for="shortDesc">Short Description: </label> 
-				<textarea type="text" name="shortDesc" id="shortDesc"  rows="2" cols="20" maxlength="99"> <? echo $row['shortDesc']?></textarea>
-			</p>
-			<p>
-				<label for="longDesc">Long Description: </label> 
-				<input type="text" name="longDesc" id="longDesc" value="<? echo $row['longDesc']?>"/>
-			</p>
-			<p>
-				<label for="from">Date from: </label> 
-				<input type="text" name="from" id="from" value="<? echo $row['dateFrom']?>"/>
-			</p>
-			<p>
-				<label for="to">Date to: </label> 
-				<input type="text" name="to" id="to" value="<? echo $row['dateTo']?>" />
-			</p>
+  			<label for="address">Address</label>
+    		<input name="address" id="address" type="text" class="form-control" placeholder="Address" value="<? echo $row['address']?>" />
+
+  			<label for="discount">Discount</label>
+    		<input name="discount" id="discount" type="text" class="form-control" placeholder="Discount" value="<? echo $row['discount']?>" />
+
+			<label for="distanceKm">Distance</label>
+    		<input name="distanceKm" id="distanceKm" type="text" class="form-control" placeholder="Distance Km" value="<? echo $row['distanceKm']?>" />
+
+			<label for="shortDesc">Short Description</label>
+    		<input name="shortDesc" id="shortDesc" type="text" class="form-control" placeholder="Short Desc." value="<? echo $row['shortDesc']?>" />
+
+			<label for="longDesc">Long Description</label>
+    		<textarea class="form-control" rows="3" name="longDesc" id="longDesc"><?php echo $row['longDesc']?></textarea>
+
+			<label for="from">Date from</label>
+    		<input name="from" id="from" type="date" class="form-control" placeholder="Date from" value="<? echo $row['dateFrom']?>" />
+
+			<label for="to">Date to</label>
+    		<input name="to" id="to" type="date" class="form-control" placeholder="Date to" value="<? echo $row['dateTo']?>" />
+			
+			<br/>
+			
 			<input type="hidden" id="editPromo" name="editPromo" value="<? echo $row['id']?>" />
-			<p>
-				<a href="javascript: submitform()">Edit Promo</a>
-			</p>
+			<a href="javascript: submitform()" class="btn btn-info btn-sm">Edit Promo</a>
+			
+			</div>
 		</form>
 	</div>
 	
