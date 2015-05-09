@@ -1,0 +1,9 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/menu_settings"
+        android:orderInCategory="100"
+        android:showAsAction="ifRoom"
+        android:title="@string/menu_settings"/>
+
+</menu><!-- From: file:/Users/gmaggiotti/src/AndroidstudioProjects/DroidFidelity/app/src/main/res/menu/list_mobile.xml -->

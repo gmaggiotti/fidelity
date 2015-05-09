@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lint>
+
+    <issue id="Deprecated" >
+
+        <ignore path="res\layout\activity_main.xml" />
+    </issue>
+
+    <issue id="HardcodedText" >
+
+        <ignore path="res\layout\activity_main.xml" />
+    </issue>
+
+    <issue id="TextFields" >
+
+        <ignore path="res\layout\activity_main.xml" />
+    </issue>
+
+</lint>

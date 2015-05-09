@@ -1,0 +1,49 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="100dip"
+    android:padding="6dip" >
+
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="130dip"
+        android:layout_height="fill_parent"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="6dip"
+        android:src="@drawable/ic_launcher" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_toRightOf="@id/logo"
+        android:gravity="center_vertical"
+        android:text="My Application"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/secondLine"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/logo"
+        android:ellipsize="marquee"
+        android:text="Simple application that shows how to use RelativeLayout largo testesto lagrgo largo largo largo lalrog" />
+
+    <TextView
+        android:id="@+id/footer"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/secondLine"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/logo"
+        android:gravity="center_vertical"
+        android:text="XXXXXXXXXXXXXXXXXXXXX "
+        android:textSize="10sp" />
+
+</RelativeLayout>
