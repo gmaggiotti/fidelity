@@ -1,17 +1,13 @@
 <?php session_start(); ?>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset-utf-8" />
-<title>Fidelity</title>
-<!--script type="text/javascript" src="js/jquery-1.7.2.min.js"></script-->
-<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
-<link href="css/fileuploader.css" rel="stylesheet" type="text/css">	
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	<meta http-equiv="Content-Type" content="text/html; charset-utf-8" />
+	<title>Fidelity</title>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+	<link href="css/fileuploader.css" rel="stylesheet" type="text/css">	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
 </head>
 
 <body>
@@ -31,6 +27,7 @@
 		<h2>Edit your Promo</h2>
 
 		<?php
+
 		include 'lib/dbConn.php';
 		include 'lib/strUtils.php';
 		
@@ -39,6 +36,7 @@
 			//Realy nasty, each field has to be validated
 
 			$id = stripslashes( $_REQUEST['editPromo'] );
+			$id_category = stripslashes( $_REQUEST['id_category'] );
 			$name = stripslashes( $_REQUEST['name'] );
 			$logo_img = stripslashes( $_REQUEST['logo'] );
 			$address = stripslashes( $_REQUEST['address'] );
@@ -49,9 +47,7 @@
 			$from = stripslashes( $_REQUEST['from'] );
 			$to =	stripslashes( $_REQUEST['to'] );
 
-			$update = "UPDATE  promotion SET name='".$name."',logo_img='".$logo_img."',address='".$address."',discount='".$discount."',distanceKm='".$distanceKm."',shortDesc='".$shortDesc."',longDesc='".$longDesc."',dateFrom='".$from."',dateTo='".$to."'
-			 WHERE id=$id";
-			echo $update;
+			$update = "UPDATE  promotion SET id_category=".$id_category.",name='".$name."',logo_img='".$logo_img."',address='".$address."',discount='".$discount."',distanceKm='".$distanceKm."',shortDesc='".$shortDesc."',longDesc='".$longDesc."',dateFrom='".$from."',dateTo='".$to."' WHERE id=$id";
  			mysql_query($update);
 
  			?>
@@ -85,8 +81,22 @@
   			<label for="discount">Discount</label>
     		<input name="discount" id="discount" type="text" class="form-control" placeholder="Discount" value="<? echo $row['discount']?>" />
 
-			<label for="distanceKm">Distance</label>
-    		<input name="distanceKm" id="distanceKm" type="text" class="form-control" placeholder="Distance Km" value="<? echo $row['distanceKm']?>" />
+			<!--label for="distanceKm">Distance</label>
+    		<input name="distanceKm" id="distanceKm" type="text" class="form-control" placeholder="Distance Km" value="<? echo $row['distanceKm']?>" /-->
+			<label for="sel1">Category:</label>
+			<select class="form-control" id="id_category" name="id_category">
+			<?php
+				$sql = "SELECT id, name FROM category ORDER BY name asc";
+				$query =  mysql_query ($sql);
+				while ( $resultado = mysql_fetch_array($query)){
+					if ($resultado['id']==$row['id_category']) {
+						echo "<option value='".$resultado['id']."' selected> ". $resultado['name']."</option>";
+					} else {
+						echo "<option value='".$resultado['id']."'> ". $resultado['name']."</option>";
+					}
+			}
+			?>
+			</select>
 
 			<label for="shortDesc">Short Description</label>
     		<input name="shortDesc" id="shortDesc" type="text" class="form-control" placeholder="Short Desc." value="<? echo $row['shortDesc']?>" />

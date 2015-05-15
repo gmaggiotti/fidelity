@@ -2,29 +2,23 @@
 session_start();
 if ($_SESSION["valid_user"])
 {
-?> <script type="text/javascript"> top.location.href='members.php'</script> <?
+  ?> <script type="text/javascript"> top.location.href='promotion.php'</script><?php
 }
 ?>
-
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset-utf-8" />
-<title>Fidelity</title>
-<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
-<script type="text/javascript" src="js/login.js"></script>
-
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
-
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-
-<!-- Custom styles for this template -->
-<link href="css/signin.css" rel="stylesheet">
-
+  <meta http-equiv="Content-Type" content="text/html; charset-utf-8" />
+  <title>Fidelity</title>
+  <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+  <script type="text/javascript" src="js/login.js"></script>
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+  <!-- Custom styles for this template -->
+  <link href="css/signin.css" rel="stylesheet">
 </head>
 <body>
 <div id="content" class="container">
