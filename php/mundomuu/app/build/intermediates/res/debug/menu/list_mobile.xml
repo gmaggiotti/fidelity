@@ -6,4 +6,4 @@
         android:showAsAction="ifRoom"
         android:title="@string/menu_settings"/>
 
-</menu><!-- From: file:/Users/gmaggiotti/src/AndroidstudioProjects/DroidFidelity/app/src/main/res/menu/list_mobile.xml -->
+</menu><!-- From: file:/Users/gmaggiotti/fidelity/php/mundomuu/app/src/main/res/menu/list_mobile.xml -->

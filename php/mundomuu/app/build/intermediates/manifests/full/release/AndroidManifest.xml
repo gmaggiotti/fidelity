@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.app.droidfidelity"
-    android:versionCode="1"
-    android:versionName="1.0" >
+    package="com.app.alacarta"
+    android:versionCode="9"
+    android:versionName="1.3a" >
 
     <uses-sdk
         android:minSdkVersion="8"
@@ -19,11 +19,11 @@
         android:maxSdkVersion="18" />
 
     <application
-        android:icon="@drawable/marcamuu512"
+        android:icon="@drawable/alacarta"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.app.droidfidelity.MainActivity"
+            android:name="com.app.alacarta.MainActivity"
             android:label="@string/title_activity_main" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -32,15 +32,19 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.app.droidfidelity.ListMobileActivity"
+            android:name="com.app.alacarta.ListMobileActivity"
             android:label="@string/title_activity_display_promo" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.app.droidfidelity.MainActivity" />
+                android:value="com.app.alacarta.MainActivity" />
         </activity>
         <activity
-            android:name="com.app.droidfidelity.DisplayPromo"
+            android:name="com.app.alacarta.DisplayPromo"
             android:label="@string/title_activity_display_promo" >
+        </activity>
+        <activity
+            android:name="com.app.alacarta.ContactActivity"
+            android:label="@string/title_activity_contact" >
         </activity>
     </application>
 

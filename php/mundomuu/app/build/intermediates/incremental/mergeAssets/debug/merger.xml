@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="/Users/gmaggiotti/src/AndroidstudioProjects/DroidFidelity/app/src/main/assets"/></dataSet><dataSet config="debug"><source path="/Users/gmaggiotti/src/AndroidstudioProjects/DroidFidelity/app/src/debug/assets"/></dataSet></merger>
+<merger version="3"><dataSet config="main"><source path="/Users/gmaggiotti/fidelity/php/mundomuu/app/src/main/assets"/></dataSet><dataSet config="debug"><source path="/Users/gmaggiotti/fidelity/php/mundomuu/app/src/debug/assets"/></dataSet></merger>

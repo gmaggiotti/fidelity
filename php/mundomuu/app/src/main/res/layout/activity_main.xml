@@ -2,13 +2,13 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:layout_marginTop="10dip"
-    android:background="#1f76ba" >
+    android:background="#ffffff" >
 
     <ImageView
         android:id="@+id/logo"
         android:layout_width="fill_parent"
         android:layout_height="230dip"
-        android:src="@drawable/marcamuu512"
+        android:src="@drawable/alacarta"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
 

@@ -5,7 +5,7 @@ android {
     buildToolsVersion "21.1.2"
 
     defaultConfig {
-        applicationId "com.app.droidfidelity"
+        applicationId "com.app.alacarta"
         minSdkVersion 8
         targetSdkVersion 15
     }

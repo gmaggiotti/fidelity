@@ -1,15 +1,23 @@
 <resources>
 
-    <string name="app_name">Plato del Dia</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="app_name">A la Carta Delivery</string>
+    <string name="contact">
+    A la carta delivery es una empresa joven que nace como respuesta para aquellas personas y empresas interesadas en comer a diario platos saludables, económicos y sobre todo de calidad.\n
+
+Contamos con un servicio de cocina propio y una cuidada elaboración, siempre con productos frescos, una variada carta de pastas, minutas, ensaladas, pizzas, empanadas, sándwiches, carnes rojas y blancas, pescados, spiedo, platos frios, postres y bebidas. También contamos con promociones para ofrecerles a diario y servicio de catering.
+
+ A parte de nuestro servicio de delivery, deseamos que conozcan nuestras instalaciones para ver y desgustar nuestras especialidades\n
+    </string>
     <string name="user_name">User Name</string>
     <string name="menu_settings">Settings</string>
     <string name="menu_refresh">Refresh</string>
+    <string name="menu_contact">Contacto</string>
     <string name="menu_exit">Exit</string>
-    <string name="title_activity_main"> Muu Lechería</string>
-    <string name="title_activity_display_promo"> Muu Lechería</string>
-    <string name="title_list_mobile"> Muu Lechería</string>
+    <string name="title_activity_main"> A la Carta Delivery</string>
+    <string name="title_activity_display_promo"> A la Carta Delivery</string>
+    <string name="title_list_mobile"> A la Carta Delivery</string>
     <string name="title_activity_display">Display</string>
     <string name="action_settings">Settings</string>
+    <string name="title_activity_contact">A la Carta Delivery</string>
 
 </resources>

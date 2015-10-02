@@ -34,7 +34,8 @@ echo "<span class=\"label label-success\">Hola ".strtoupper($_SESSION["valid_use
 echo "<span class=\"label label-warning\">Ingresaste por ultima vez ".date("d/m/Y", $_SESSION["valid_time"])."</span><br><br>";
 echo "<br>";
 
-$sql = "SELECT p.*, c.name as category_name FROM promotion p LEFT JOIN category c ON p.id_category=c.id WHERE p.id_brand=" . $_SESSION["valid_id"];
+$sql = "SELECT p.* FROM promotion p  WHERE p.id_brand=" . $_SESSION["valid_id"];
+echo $sql;
 $result = mysql_query($sql);
 
 	echo "<table class='table table-striped'>";

@@ -51,7 +51,7 @@ ADDED from AndroidManifest.xml:21:5
 		ADDED from AndroidManifest.xml:22:9
 	android:theme
 		ADDED from AndroidManifest.xml:24:9
-activity#com.app.droidfidelity.MainActivity
+activity#com.app.alacarta.MainActivity
 ADDED from AndroidManifest.xml:25:9
 	android:label
 		ADDED from AndroidManifest.xml:27:13
@@ -67,7 +67,7 @@ category#android.intent.category.LAUNCHER
 ADDED from AndroidManifest.xml:31:17
 	android:name
 		ADDED from AndroidManifest.xml:31:27
-activity#com.app.droidfidelity.ListMobileActivity
+activity#com.app.alacarta.ListMobileActivity
 ADDED from AndroidManifest.xml:34:9
 	android:label
 		ADDED from AndroidManifest.xml:36:13
@@ -79,9 +79,15 @@ ADDED from AndroidManifest.xml:37:13
 		ADDED from AndroidManifest.xml:38:17
 	android:value
 		ADDED from AndroidManifest.xml:39:17
-activity#com.app.droidfidelity.DisplayPromo
+activity#com.app.alacarta.DisplayPromo
 ADDED from AndroidManifest.xml:41:9
 	android:label
 		ADDED from AndroidManifest.xml:43:13
 	android:name
 		ADDED from AndroidManifest.xml:42:13
+activity#com.app.alacarta.ContactActivity
+ADDED from AndroidManifest.xml:45:9
+	android:label
+		ADDED from AndroidManifest.xml:47:13
+	android:name
+		ADDED from AndroidManifest.xml:46:13
